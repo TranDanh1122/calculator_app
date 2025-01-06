@@ -793,3 +793,13 @@ html {
   align-items: center;
   justify-content: center;
 }
+
+@media (min-width: 0) and (max-width: 767px) {
+  .mb\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .mb\:text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+}

@@ -186,16 +186,17 @@ function App() {
       dispatch({ type: "RESULT" })
       return
     }
-    if (!isNaN(value as unknown as number)) {
+    if (!isNaN(value as unknown as number) || value == ".") {
       dispatch({ type: "INPUT", number: value })
       return
     }
 
-    dispatch({ type: "ACTION", key: value as Operator })
+    dispatch({ type: "ACTION", key: value as Operator });
+    return;
 
   }
   return (
-    <div className="w-full max-w-[540px]">
+    <div className="w-full mb:w-[90%] max-w-[540px]">
       <header className={clsx("flex justify-between", {
         [`text-[var(--text-secondary)]`]: theme === "light",
         [`text-[var(--text-primary)]`]: theme !== "light",
