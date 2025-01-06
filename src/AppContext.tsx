@@ -4,7 +4,6 @@ interface AppContextType {
     previousResult: number
     operator: string
 }
-type Operator = "*" | "/" | "+" | "-"
 type ActionType = { type: "INPUT", number: string }
     | { type: "ACTION", key: Operator }
     | { type: "DEL" }
